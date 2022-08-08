@@ -38,3 +38,19 @@ console.log(Math.max(...ages));
 
 //Calculando promedio de edad de personas
 console.log((ages.reduce((a,b)=>a+b))/ages.length);
+
+//Insertar nueva persona
+
+const savePerson = (data)=>{
+  if(data.age>120||data.age<=0){
+    console.log("El promedio de edad debe estar de 0 a 120");
+    return false
+  }
+
+  data.push(data)
+};
+
+savePerson({
+  name:"Carlitos",
+  age:22
+});
